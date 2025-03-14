@@ -3,7 +3,7 @@ __pycache__
 venv# Devenv
 .devenv*
 devenv.local.nix
-
+config.json
 # direnv
 .direnv
 
