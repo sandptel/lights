@@ -1,0 +1,29 @@
+{
+    "checksum": "bb431c9fd10a3f4cfad5ec6089d3fbdc",
+    "wallpaper": "/home/roronoa/Pictures/wallpapers/GOOD/Best/Crazy/gengar.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#020002",
+        "foreground": "#bfbfbf",
+        "cursor": "#bfbfbf"
+    },
+    "colors": {
+        "color0": "#020002",
+        "color1": "#7f0021",
+        "color2": "#b00001",
+        "color3": "#bd0800",
+        "color4": "#ba0021",
+        "color5": "#e40100",
+        "color6": "#7200b3",
+        "color7": "#928692",
+        "color8": "#625062",
+        "color9": "#aa002c",
+        "color10": "#ec0002",
+        "color11": "#fd0d00",
+        "color12": "#f9002c",
+        "color13": "#ff3330",
+        "color14": "#9700ef",
+        "color15": "#bfbfbf"
+    }
+}
