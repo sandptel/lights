@@ -1,0 +1,358 @@
+[Sat Jan 11 04:03:23 AM IST 2025] Starting lights.py
+Changed color to (14, 159, 175)
+Changed color to (11, 142, 142)
+Changed color to (18, 131, 222)
+Traceback (most recent call last):
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/lights.py", line 21, in main
+    await monitor_file_and_update_devices('colors.json', devices)
+  File "/home/roronoa/Documents/autolitt/file_monitor.py", line 14, in monitor_file_and_update_devices
+    async for changes in awatch(file_path):
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/watchfiles/main.py", line 263, in awatch
+    async with anyio.create_task_group() as tg:
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 771, in __aexit__
+    raise exc_val
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/watchfiles/main.py", line 265, in awatch
+    raw_changes = await anyio.to_thread.run_sync(watcher.watch, debounce, step, timeout, stop_event_)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2461, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/lights.py", line 29, in <module>
+    asyncio.run(main())
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 19, in initialize_connection
+    self.api.init(self.username, self.password, self.country_code, self.application)
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 44, in init
+    self.get_access_token()
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 68, in get_access_token
+    raise TuyaAPIException(message)
+tuyapy.tuyaapi.TuyaAPIException: you cannot auth exceed once in 180 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 29, in <module>
+    asyncio.run(main())
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 16, in main
+    devices = await manager.initialize_connection()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 26, in initialize_connection
+    return await self.retry_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 31, in retry_connection
+    wait_time = 2 ** self.retry_count + 180*{self.retry_count-1}
+                                        ~~~^~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'int' and 'set'
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 19, in initialize_connection
+    self.api.init(self.username, self.password, self.country_code, self.application)
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 44, in init
+    self.get_access_token()
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 68, in get_access_token
+    raise TuyaAPIException(message)
+tuyapy.tuyaapi.TuyaAPIException: you cannot auth exceed once in 180 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 29, in <module>
+    asyncio.run(main())
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 16, in main
+    devices = await manager.initialize_connection()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 26, in initialize_connection
+    return await self.retry_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 31, in retry_connection
+    wait_time = 2 ** self.retry_count + 180*{self.retry_count-1}
+                                        ~~~^~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'int' and 'set'
+/home/roronoa/Documents/autolitt/connection_manager.py:31: SyntaxWarning: 'int' object is not callable; perhaps you missed a comma?
+  wait_time = 2 ** self.retry_count + 180(self.retry_count-1)
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 19, in initialize_connection
+    self.api.init(self.username, self.password, self.country_code, self.application)
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 44, in init
+    self.get_access_token()
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 68, in get_access_token
+    raise TuyaAPIException(message)
+tuyapy.tuyaapi.TuyaAPIException: you cannot auth exceed once in 180 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 29, in <module>
+    asyncio.run(main())
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 16, in main
+    devices = await manager.initialize_connection()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 26, in initialize_connection
+    return await self.retry_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 31, in retry_connection
+    wait_time = 2 ** self.retry_count + 180(self.retry_count-1)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'int' object is not callable
+/home/roronoa/Documents/autolitt/connection_manager.py:31: SyntaxWarning: 'int' object is not callable; perhaps you missed a comma?
+  wait_time = 2 ** self.retry_count + 180(self.retry_count-1)
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 19, in initialize_connection
+    self.api.init(self.username, self.password, self.country_code, self.application)
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 44, in init
+    self.get_access_token()
+  File "/home/roronoa/Documents/autolitt/.devenv/state/venv/lib/python3.12/site-packages/tuyapy/tuyaapi.py", line 68, in get_access_token
+    raise TuyaAPIException(message)
+tuyapy.tuyaapi.TuyaAPIException: you cannot auth exceed once in 180 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 29, in <module>
+    asyncio.run(main())
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/0kiqn2c72p68h7zikc5m0kqv5s8n4c1g-python3-3.12.7-env/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/./lights.py", line 16, in main
+    devices = await manager.initialize_connection()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 26, in initialize_connection
+    return await self.retry_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 31, in retry_connection
+    wait_time = 2 ** self.retry_count + 180(self.retry_count-1)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'int' object is not callable
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Connection failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 2 seconds... (Attempt 1)
+Retry 1 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 4 seconds... (Attempt 2)
+Retry 2 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Retrying connection in 8 seconds... (Attempt 3)
+Retry 3 failed: TuyaAPIException('you cannot auth exceed once in 180 seconds')
+Max retries exceeded. Entering broken state.
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'
+Traceback (most recent call last):
+  File "/home/roronoa/./Documents/autolitt/lights.py", line 4, in <module>
+    from connection_manager import ConnectionManager
+  File "/home/roronoa/Documents/autolitt/connection_manager.py", line 4, in <module>
+    from tuyapy import TuyaApi
+ModuleNotFoundError: No module named 'tuyapy'

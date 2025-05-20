@@ -1,0 +1,11 @@
+.idea
+__pycache__
+venv# Devenv
+.devenv*
+devenv.local.nix
+config.json
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml

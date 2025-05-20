@@ -1,0 +1,8 @@
+requests
+tuyapy==0.1.4
+pillow
+pyscreenshot
+watchfiles
+colorthief
+aiofiles
+python-daemon
