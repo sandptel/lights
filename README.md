@@ -2,7 +2,31 @@
 
 Lights is an application utilizing the Tuya API to automatically change SmartLife/Tuya lights based on your desktop color scheme.
 
+https://github.com/user-attachments/assets/8c471348-b05f-405b-8f79-2ad85abb1e10
+
 > The following application is a very rough/quick implementation of the application I wanted to make. I aim to rewrite this in rust in near future to improve latency and add a widget to control all these.
+
+This implementation relies on [pywal](https://github.com/dylanaraps/pywal) $color12 from the colortheif.py file. Which you can copy and configure to the lights_folder using this script or maybe extend it accordingly.
+
+```bash
+#!/bin/bash
+
+# wal_template=$HOME/.config/wal/templates/obsidian.css
+wal_cached=$HOME/.cache/wal/colors.json
+
+
+link_template () {
+    ln -sr $wal_cached $1
+} 
+
+lights_folder=$HOME/Documents/autolitt
+
+rm $lights_folder/colors.json
+
+cp $wal_cached $autolit_folder/colors.json
+# cp $wal_cached $obsidian_vault/.obsidian/obsidian1.css
+
+```
 
 ## Overview
 
